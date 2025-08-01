@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import TaskForm from "./components/TaskForm";
+import TaskInput from "./components/TaskInput";
 import TaskCard from "./components/TaskCard";
 import  {type TaskCardProps } from "./libs/types";
 
@@ -41,10 +41,11 @@ function App() {
         <Sidebar userName="Lawit" type="student" />
         <div className="container text-center">
           <main className="flex-grow-1 p-4">
-            <TaskForm />
-            {tasks.map((task) => (
-              <TaskCard key={task.id} {...task} />
-            ))}
+            <TaskInput></TaskInput>
+            <TaskCard {...tasks[0]}></TaskCard>
+            <TaskCard {...tasks[1]}></TaskCard>
+            <TaskCard {...tasks[2]}></TaskCard>
+            <TaskCard {...tasks[3]}></TaskCard>
           </main>
         </div>
       </div>

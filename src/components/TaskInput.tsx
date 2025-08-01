@@ -1,5 +1,5 @@
-// src/components/TaskForm.tsx
-function TaskForm() {
+// src/components/TaskInput.tsx
+function TaskInput() {
   return (
     <div className="m-2 p-2">
       <form className="row">
@@ -18,4 +18,4 @@ function TaskForm() {
   );
 }
 
-export default TaskForm;
+export default TaskInput;

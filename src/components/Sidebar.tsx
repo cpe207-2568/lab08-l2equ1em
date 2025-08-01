@@ -1,7 +1,7 @@
 // src/components/Sidebar.tsx
 import type{ SidebarProps } from "../libs/types";
 
-function Sidebar({ userName, type }: SidebarProps) {
+function Sidebar(props: SidebarProps) {
   return (
     <aside
       className="d-flex flex-column p-3"
@@ -24,7 +24,7 @@ function Sidebar({ userName, type }: SidebarProps) {
         </a>
       </nav>
       <div className="fw-bold text-muted">
-        <p>{userName} : {type}</p>
+        <p>{props.userName} : {props.type}</p>
       </div>
     </aside>
   );

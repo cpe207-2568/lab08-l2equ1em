@@ -1,21 +1,21 @@
 // src/components/TaskCard.tsx
 import type { TaskCardProps } from "../libs/types";
 
-function TaskCard({ title, description, isDone }: TaskCardProps) {
+function TaskCard(props: TaskCardProps) {
   return (
-    <div className={`card mb-3 ${isDone ? "border-success" : ""}`}>
+    <div className= "card mb-3">
       <div className="card-body">
         <div className="row">
-          <div className="col-lg-4">
-            <h5 className="card-title">{title}</h5>
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+            <h5 className="card-title">{props.title}</h5>
           </div>
-          <div className="col-lg-4">
-            <p className="card-text">{description}</p>
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+            <p className="card-text">{props.description}</p>
           </div>
-          <div className="col-lg-2">
-            <button className="btn btn-success me-2">Done</button>
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+            <button className="btn btn-success me-2">{props.isDone}Done</button>
           </div>
-          <div className="col-lg-2">
+          <div className="col-xs-3 col-sm-3 col-md-3 col-lg-2">
             <button className="btn btn-danger">Delete</button>
           </div>
         </div>
